@@ -1,0 +1,210 @@
+@import "../global/vars";
+
+.base-data {
+  display: flex;
+  flex-wrap: nowrap;
+  &__content {
+    padding: 65px 0 40px 25px;
+    flex: 0 1 1050px;
+  }
+  &__title {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  &__description {
+    padding-top: 10px;
+    color: #a9aaa9;
+    font-size: 18px;
+    line-height: 23px;
+  }
+  &__section,
+  &__field {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  &__section {
+    margin-top: 25px;
+    background-color: #eee;
+    padding: 12px 0 28px 12px;
+    position: relative;
+    &--first {
+      padding-bottom: 20px;
+      background-color: #fff;
+    }
+  }
+  &__field {
+    padding-bottom: 20px;
+  }
+  &__branch {
+    padding-top: 60px;
+    flex: 1 1 50%;
+    &--first {
+      padding-top: 0;
+    }
+  }
+  &__name {
+    flex: 0 1 185px;
+    line-height: 21px;
+    padding-top: 7px;
+    position: relative;
+  }
+  &__name-icon {
+    margin-left: 5px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url($imgPath + 'explain.svg') center center no-repeat;
+    cursor: pointer;
+  }
+  &__checkbox-label {
+    padding-left: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    cursor: pointer;
+    &--diff {
+      padding-left: 0;
+    }
+  }
+  &__checkbox {
+    display: none;
+    &:checked + .base-data__checkbox-btn {
+      &::after {
+        display: block;
+      }
+    }
+  }
+  &__checkbox-btn {
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border: 2px solid $lightGrayColor;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 25px;
+      height: 25px;
+      background: url($imgPath + 'checked.svg') 30% 40% no-repeat;
+      display: none;
+    }
+  }
+  &__advice {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    color: #d32e40;
+  }
+  &__input {
+    flex: 0 1 280px;
+    height: 35px;
+    font-size: 15px;
+    border: 1px solid $lightGrayColor;
+    text-indent: 10px;
+    &::placeholder {
+      color: $placeholderColor;
+      font-size: 15px;
+    }
+    &--date {
+      width: 115px;
+      margin: 0 10px;
+    }
+    &--first {
+      height: 42px;
+    }
+  }
+  &__text {
+    padding-left: 10px;
+    line-height: 42px;
+    color: $placeholderColor;
+  }
+  &__select {
+    flex: 0 1 280px;
+    height: 35px;
+    border: 1px solid $lightGrayColor;
+    background: #fff url($imgPath + 'select.svg') 95% center no-repeat;
+    text-indent: 15px;
+    color: $placeholderColor;
+    font: 16px/1 $fontApple;
+    &:hover {
+      border-color: #909090;
+    }
+    &--first {
+      height: 42px;
+    }
+  }
+  &__turn {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 8px;
+    top: 12px;
+    background: url($imgPath + 'link.svg') center center no-repeat;
+    transform: rotate(-90deg);
+    &:hover {
+      opacity: .7;
+    }
+    &--closed {
+      transform: rotate(90deg);
+    }
+  }
+  &__section-title {
+    text-transform: uppercase;
+    font: 19px $fontCondensed;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+  }
+  &__form-set {
+    color: #676767;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  &__link {
+    padding-left: 10px;
+    display: inline;
+    color: $lime;
+  }
+  &__footer {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 31px auto 0;
+    padding-top: 26px;
+    border-top: 4px solid #ddd;
+  }
+  &__footer-btn {
+    height: 31px;
+    &--save {
+      padding-left: 10px;
+      flex: 0 1 145px;
+      color: #fff;
+      background: url($imgPath + 'save.svg') 8% center no-repeat,
+      url($imgPath + 'rect-full.png') right center no-repeat;
+    }
+    &--back {
+      text-indent: 45px;
+      flex: 0 1 111px;
+      color: $lime;
+      margin-left: -17px;
+      background: url($imgPath + 'back.svg') 33% center no-repeat,
+      url($imgPath + 'rect-border.png') left center no-repeat;
+      background-size: auto, 100%;
+    }
+    &--remove {
+      margin-left: auto;
+      padding-left: 55px;
+      flex: 0 1 133px;
+      color: $lime;
+      background: url($imgPath + 'garbich.svg') 35% center no-repeat,
+      url($imgPath + 'rect-border.png') left center no-repeat;
+      background-size: auto, 100% 98%;
+    }
+    &:hover {
+      opacity: .7;
+    }
+  }
+}
+@import 'base-data-media';

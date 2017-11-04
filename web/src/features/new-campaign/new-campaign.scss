@@ -1,0 +1,158 @@
+@import '../global/vars';
+
+.new-campaign {
+  display: flex;
+  flex-wrap: nowrap;
+  &__content {
+    padding: 65px 0 40px 25px;
+    flex: 0 1 1050px;
+  }
+  &__title {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  &__description {
+    padding-top: 10px;
+    width: 900px;
+    color: #a9aaa9;
+    font-size: 18px;
+    line-height: 23px;
+  }
+  &__section {
+    margin-top: 35px;
+    padding: 15px 24px 25px 15px;
+    background-color: #eee;
+  }
+  &__section-title {
+    font: 19px $fontCondensed;
+    text-transform: uppercase;
+  }
+  &__title-info {
+    margin-left: 5px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url($imgPath + 'explain.svg') center center no-repeat;
+    cursor: pointer;
+  }
+  &__field {
+    padding-top: 25px;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  &__field-name {
+    flex: 0 1 200px;
+    line-height: 35px;
+  }
+  &__field-input {
+    flex: 0 1 370px;
+    height: 35px;
+    border: 1px solid #dfdfdf;
+    text-indent: 5px;
+  }
+  &__field-select {
+    flex: 0 1 370px;
+    height: 35px;
+    border: 1px solid #dfdfdf;
+    background: #fff url($imgPath + 'select.svg') 98% center no-repeat;
+    text-indent: 15px;
+    color: #7a7a7a;
+    font: 16px/1 $fontApple;
+    &:hover {
+      border-color: #909090;
+    }
+  }
+  &__input-set {
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 0 1 auto;
+  }
+  &__field-area {
+    margin-right: 10px;
+    height: 35px;
+    width: 48px;
+    border: 1px solid #dfdfdf;
+    text-indent: 5px;
+    &--big {
+      width: 110px;
+    }
+  }
+  &__btn-set {
+    margin-top: 30px;
+    margin-left: 200px;
+    width: 280px;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  &__save-btn {
+    flex: 0 1 145px;
+    height: 31px;
+    color: #fff;
+    line-height: 36px;
+    background: url($imgPath + 'save.svg') 8% center no-repeat,
+    url($imgPath + 'rect-full.png') right center no-repeat;
+    background-size: auto, 100% 95%;
+    &:hover {
+      opacity: .7;
+    }
+  }
+  &__remove-btn {
+    margin-left: -18px;
+    padding-left: 55px;
+    flex: 0 1 132px;
+    height: 31px;
+    color: $lime;
+    line-height: 36px;
+    background: url($imgPath + 'garbich.svg') 35% center no-repeat,
+    url($imgPath + 'rect-border.png') left center no-repeat;
+    background-size: auto, 100% 98%;
+    &:hover {
+      opacity: .7;
+    }
+  }
+  &__warning {
+    margin-top: 20px;
+    margin-left: 200px;
+    width: 375px;
+    color: $placeholderColor;
+    font-size: 12px;
+    line-height: 12px;
+  }
+  &__text {
+    margin-top: 22px;
+  }
+  &__password-btn {
+    margin-top: 45px;
+    padding-right: 10px;
+    height: 31px;
+    width: 215px;
+    color: #fff;
+    line-height: 35px;
+    background: url($imgPath + 'save.svg') 4% center no-repeat,
+    url($imgPath + 'rect-full.png') right center no-repeat;
+    background-size: auto, 100%;
+    &:hover {
+      opacity: .7;
+    }
+  }
+  &__history {
+    margin-top: 43px;
+    color: $placeholderColor;
+  }
+  &__history-set {
+    margin-top: 13px;
+    margin-bottom: 20px;
+    padding: 6px 13px;
+    width: 266px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-size: 12px;
+    background-color: #e8e8e8;
+    color: $placeholderColor;
+    box-shadow: 0 1px 2px #b4b4b4;
+  }
+  &__history-item {
+    flex: 0 1 50%;
+  }
+}

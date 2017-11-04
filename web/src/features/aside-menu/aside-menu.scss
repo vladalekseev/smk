@@ -1,0 +1,113 @@
+@import "../global/vars";
+
+.aside-menu {
+  display: flex;
+  flex-wrap: nowrap;
+  flex: 0 1 350px;
+  &__profile {
+    flex: 0 1 150px;
+    color: #fff;
+    font-family: $fontApple;
+    background-color: #091b41;
+    text-align: center;
+  }
+  &__profile-header {
+    font-size: 18px;
+    height: 65px;
+    line-height: 65px;
+    border-bottom: 1px solid #ddd;
+  }
+  &__profile-item {
+    color: #fff;
+    font-size: 15px;
+    padding-top: 65px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+    background: center 25% no-repeat;
+    opacity: .6;
+    transition: opacity .3s;
+    position: relative;
+    &--active,
+    &:hover {
+      opacity: 1;
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-right: 15px solid #fff;
+        transform: translateY(-50%);
+      }
+    }
+    &--print-ulm {
+      background-image: url($imgPath + 'ulm-print.svg');
+    }
+    &--online-ulm {
+      background-image: url($imgPath + 'ulm-online.svg');
+    }
+    &--online-augsburg {
+      background-image: url($imgPath + 'augsburg-online.svg');
+    }
+  }
+  &__profile-section {
+    flex: 0 1 225px;
+    background-image: linear-gradient(to right, #fff 0%, #f6f6f6 100%);
+  }
+  &__profile-back {
+    display: flex;
+    height: 65px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f3f7ff;
+  }
+  &__back-btn {
+    color: $lime;
+    font-size: 14px;
+    padding: 0 15px 0 30px;
+    margin: auto;
+    height: 31px;
+    border-radius: 1px;
+    border: 2px solid $lime;
+    background: url($imgPath + 'back.svg') 5% center no-repeat;
+    &:hover {
+      opacity: .7;
+    }
+  }
+  &__profile-step {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    line-height: 72px;
+    padding-left: 21px;
+    padding-right: 25px;
+    color: #091b41;
+    border-bottom: 1px solid #ddd;
+    &:hover,
+    &--active{
+      background-image: linear-gradient(to right, #ffffff 0%, #dbe59a 100%);
+      .aside-menu__profile-number {
+        background-color: #c4037f;
+        color: #fff;
+      }
+    }
+    &--checked {
+      background: url($imgPath + 'nav-check.svg') 95% center no-repeat;
+    }
+  }
+  &__profile-number {
+    margin-right: 15px;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #c4037f;
+    color: #c4037f;
+    font: 22px/1.2 $fontSF;
+  }
+  &__profile-name {
+    color: $lime;
+  }
+}
+@import "aside-meny-media";

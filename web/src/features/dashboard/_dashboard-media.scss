@@ -1,0 +1,11 @@
+@media screen and (max-width: 1024px) {
+  .dashboard-top__warning {
+    right: 15px;
+    bottom: 12px;
+  }
+  .dashboard-content,
+  .dashboard-top__title {
+    width: 95%;
+    margin: auto;
+  }
+}

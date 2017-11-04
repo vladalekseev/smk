@@ -1,0 +1,76 @@
+@import '../global/vars';
+
+.redactor-online {
+  height: 700px;
+  background-color: #eee;
+  padding: 15px 16px 26px 11px;
+  margin: 25px auto 0;
+  &__content {
+    display: flex;
+    flex-wrap: nowrap;
+    font: 14px $fontApple;
+    height: 100%;
+    background: url($imgPath + 'print-bg.png') left 25% no-repeat;
+    position: relative;
+    color: $pink;
+    text-align: center;
+  }
+  &__arrow {
+    z-index: 5;
+    width: 267px;
+    height: 131px;
+    position: absolute;
+    bottom: 15%;
+    left: 20%;
+    background: url($imgPath + 'arrow-path.png') left top no-repeat;
+  }
+  &__profiles {
+    position: absolute;
+    width: 100%;
+    height: 45px;
+    bottom: 5px;
+    display: flex;
+    justify-content: center;
+  }
+  &__number {
+    color: rgba(196, 3, 127, .5);
+    font: 36px $fontSF;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    transform: translateY(-50%);
+    transition: color .3s;
+  }
+  &__tooltip {
+    z-index: 5;
+    top: 50px;
+    text-align: center;
+    font-size: 13px;
+    position: absolute;
+    left: -2px;
+    width: 102%;
+    padding: 5px 12px;
+    background-color: #000;
+    border-radius: 4px;
+    color: #fff;
+    line-height: 1.4;
+    transition: border-color .3s, opacity .5s;
+    visibility: hidden;
+    opacity: 0;
+    &::after {
+      content: '';
+      position: absolute;
+      right: 48%;
+      top: -5px;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-bottom: 5px solid #000;
+      border-right: 5px solid transparent;
+    }
+    &--logo {
+      top: 62px;
+    }
+  }
+}
+@import 'redactor-media';

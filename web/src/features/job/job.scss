@@ -1,0 +1,232 @@
+@import "../global/vars";
+
+.job {
+  display: flex;
+  flex-wrap: nowrap;
+  &__content {
+    padding: 65px 0 40px 25px;
+    flex: 0 1 1050px;
+  }
+  &__title {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  &__description {
+    padding-top: 10px;
+    color: #a9aaa9;
+    font-size: 18px;
+    line-height: 23px;
+  }
+  &__section,
+  &__field {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  &__section {
+    margin-top: 25px;
+    background-color: #eee;
+    padding: 12px 0 28px 5px;
+    position: relative;
+  }
+  &__field {
+    padding-bottom: 20px;
+    height: 55px;
+  }
+  &__branch {
+    flex: 1 1 50%;
+    &--first {
+      padding-top: 0;
+    }
+  }
+  &__name {
+    flex: 0 1 185px;
+    line-height: 21px;
+    padding-top: 7px;
+    position: relative;
+    &--industry {
+      flex: 0 1 200px;
+    }
+  }
+  &__radio-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  &__radio-item {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-left: 15px;
+  }
+  &__radio-btn {
+    cursor: pointer;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid $hintColor;
+    position: relative;
+  }
+  &__radio:checked {
+    & + .job__radio-btn {
+      border-color: $lime;
+      &::after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $lime;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  &__radio-text {
+    height: 36px;
+    background: left center no-repeat;
+    padding: 10px 0 10px 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    color: #7a7a7a;
+  }
+  &__checkbox-label {
+    padding-left: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    cursor: pointer;
+    &--diff {
+      padding-left: 0;
+    }
+  }
+  &__checkbox {
+    display: none;
+    &:checked + .job__checkbox-btn {
+      &::after {
+        display: block;
+      }
+    }
+  }
+  &__checkbox-btn {
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border: 2px solid $lightGrayColor;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 25px;
+      height: 25px;
+      background: url($imgPath + 'checked.svg') 30% 40% no-repeat;
+      display: none;
+    }
+  }
+  &__input {
+    flex: 0 1 360px;
+    height: 35px;
+    font-size: 15px;
+    border: 1px solid $lightGrayColor;
+    text-indent: 10px;
+    &::placeholder {
+      color: $placeholderColor;
+      font-size: 15px;
+    }
+    &--industry {
+      flex: 0 1 600px;
+      height: 45px;
+    }
+  }
+  &__text {
+    padding-top: 7px;
+    padding-left: 10px;
+    line-height: 21px;
+    color: $placeholderColor;
+  }
+  &__select {
+    flex: 0 1 360px;
+    height: 35px;
+    border: 1px solid $lightGrayColor;
+    border-radius: 0;
+    background: #fff url($imgPath + 'select.svg') 95% center no-repeat;
+    text-indent: 15px;
+    color: $placeholderColor;
+    font: 16px/1 $fontApple;
+    &:hover {
+      border-color: #909090;
+    }
+  }
+  &__turn {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 8px;
+    top: 12px;
+    background: url($imgPath + 'link.svg') center center no-repeat;
+    transform: rotate(-90deg);
+    &:hover {
+      opacity: .7;
+    }
+    &--closed {
+      transform: rotate(90deg);
+    }
+  }
+  &__section-title {
+    text-transform: uppercase;
+    font: 19px $fontCondensed;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+  }
+  &__section-content {
+    width: 100%;
+    padding-top: 60px;
+  }
+  &__area {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  &__footer {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 31px auto 0;
+    padding-top: 26px;
+    border-top: 4px solid #ddd;
+  }
+  &__footer-btn {
+    height: 31px;
+    &--save {
+      padding-left: 10px;
+      flex: 0 1 145px;
+      color: #fff;
+      background: url($imgPath + 'save.svg') 8% center no-repeat,
+      url($imgPath + 'rect-full.png') right center no-repeat;
+    }
+    &--back {
+      text-indent: 45px;
+      flex: 0 1 111px;
+      color: $lime;
+      margin-left: -17px;
+      background: url($imgPath + 'back.svg') 33% center no-repeat,
+      url($imgPath + 'rect-border.png') left center no-repeat;
+      background-size: auto, 100%;
+    }
+    &--remove {
+      margin-left: auto;
+      padding-left: 55px;
+      flex: 0 1 134px;
+      color: $lime;
+      background: url($imgPath + 'garbich.svg') 35% center no-repeat,
+      url($imgPath + 'rect-border.png') left center no-repeat;
+      background-size: auto, 100% 98%;
+    }
+    &:hover {
+      opacity: .7;
+    }
+  }
+}

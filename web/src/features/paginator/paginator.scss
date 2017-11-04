@@ -1,0 +1,55 @@
+@import '../global/vars';
+
+.paginator {
+  padding-top: 25px;
+  padding-right: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  color: $grayColor;
+  &__select {
+    flex: 0 1 56px;
+    height: 26px;
+    border-radius: 1px;
+    border: 1px solid #bbb;
+    background: #fff url($imgPath + 'select.svg') 95% center no-repeat;
+    padding-left: 15px;
+    font: 16px/1 $fontApple;
+    &:hover {
+      border-color: #909090;
+    }
+  }
+  &__results {
+    font: 13px/1 $fontApple;
+    flex: 0 1 135px;
+    margin-left: 8px;
+  }
+  &__pages {
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 0 1 auto;
+  }
+  &__page {
+    width: 20px;
+    height: 20px;
+    line-height: 1.5;
+    font-size: 13px;
+    color: $lime;
+    margin-right: 10px;
+    text-align: center;
+    border-radius: 50%;
+    transition: color .2s, background-color .2s;
+    &--active,
+    &:hover {
+      color: #fff;
+      background-color: $lime;
+    }
+  }
+  &__more {
+    color: $lime;
+    padding-left: 8px;
+    padding-right: 20px;
+    background: url($imgPath + 'link.svg') right 40% no-repeat;
+  }
+}

@@ -1,0 +1,18 @@
+@import "../global/vars";
+.scroll {
+  position: absolute;
+  right: 18px;
+  width: 32px;
+  height: 32px;
+  background: url($imgPath + 'scroll-down.svg') center center no-repeat;
+  &:hover {
+    opacity: .7;
+  }
+  &--toggle {
+    top: 62%;
+  }
+  &--top {
+    transform: rotate(180deg);
+    bottom: 6%;
+  }
+}

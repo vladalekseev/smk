@@ -1,0 +1,35 @@
+@media screen and (max-width: 1024px) {
+  .header {
+    &__person-icon {
+      &--login {
+        display: inline-block;
+      }
+    }
+    &__person-name {
+      display: none;
+    }
+    &__list-item {
+      padding-right: 15px;
+    }
+  }
+}
+@media screen and (max-width: 1439px) {
+  .header {
+    &__person-name {
+      display: none;
+    }
+    &__title {
+      padding-right: 50px;
+      height: 55px;
+    }
+    &__title-link {
+      margin-right: 25px;
+    }
+    &__sandwich {
+      display: inline-block;
+    }
+    &__settings {
+      padding-left: 0;
+    }
+  }
+}

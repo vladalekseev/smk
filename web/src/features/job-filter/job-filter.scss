@@ -1,0 +1,251 @@
+@import '../global/vars';
+
+.job-filter {
+  display: flex;
+  flex-wrap: nowrap;
+  &__content {
+    padding: 65px 0 40px 25px;
+    flex: 0 1 1050px;
+  }
+  &__header {
+    display: inline-block;
+    font: bold 28px/1 $fontSF;
+  }
+  &__add-company {
+    display: inline-block;
+    margin-left: 25px;
+    margin-bottom: 15px;
+    padding-right: 8px;
+    width: 266px;
+    height: 31px;
+    line-height: 38px;
+    text-align: center;
+    color: #fff;
+    background: url($imgPath + 'plus.svg') 5% center no-repeat,
+    url($imgPath + 'rect-full.png') right center no-repeat;
+    background-size: auto, 100%;
+    &:hover {
+      opacity: .7;
+    }
+  }
+  &__filter {
+    margin-top: 20px;
+    padding: 10px 70px 45px 16px;
+    background-color: #eee;
+  }
+  &__filter-title {
+    padding: 12px 40px;
+    margin-bottom: 10px;
+    background: url($imgPath + 'filter.svg') left center no-repeat;
+    font: 700 19px $fontCondensed;
+    text-transform: uppercase;
+  }
+  &__title-info {
+    margin-left: 5px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url($imgPath + 'explain.svg') center center no-repeat;
+    cursor: pointer;
+  }
+  &__filter-form {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    line-height: 2.6;
+  }
+  &__filter-hint {
+    color: $hintColor;
+  }
+  &__filter-select {
+    padding-left: 10px;
+    width: 160px;
+    height: 42px;
+    border-radius: 1px;
+    border: 1px solid #bbb;
+    background: #fff url($imgPath + 'select.svg') 95% center no-repeat;
+    color: $grayColor;
+    font: 16px/1 $fontApple;
+    &--big {
+      width: 220px;
+    }
+    &:hover {
+      border-color: #909090;
+    }
+  }
+  &__filter-submit {
+    outline: none;
+    margin: 6px 15px 6px 0;
+    color: #fff;
+    position: relative;
+    height: 31px;
+    width: 113px;
+    text-align: center;
+    border-radius: 1px;
+    background: url($imgPath + 'fill-10.svg') 9px center no-repeat,
+    url($imgPath + 'rect-full.png') right center no-repeat;
+    &:hover {
+      opacity: .8;
+    }
+  }
+  &__results-set {
+    position: relative;
+  }
+  &__filter-results {
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 42px;
+    align-items: center;
+    width: 120px;
+  }
+  &__results-amount {
+    flex: 1 1 auto;
+    white-space: nowrap;
+    color: $hintColor;
+    font: 16px/1 $fontApple;
+  }
+  &__results-reset {
+    flex: 0 1 18px;
+    height: 18px;
+    background: url($imgPath + 'clear-close.svg') center 65% no-repeat;
+  }
+  &__table {
+    color: $grayColor;
+    padding-bottom: 32px;
+    border-bottom: 4px solid #ccc;
+  }
+  &__table-head {
+    margin-top: 42px;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 44px;
+    border-bottom: 1px solid #ccc;
+    background-image: linear-gradient(180deg, #fdfdfd 0%, #f6f6f6 100%);
+  }
+  &__head-date {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-left: 5px;
+    &--activity {
+      padding-left: 18px;
+      flex: 0 1 55px;
+    }
+    &--firm {
+      flex: 1 1 200px;
+    }
+    &--source {
+      flex: 0 1 100px;
+    }
+    &--categorization {
+      flex: 0 1 180px;
+    }
+    &--designation {
+      flex: 0 1 200px;
+    }
+    &--profile {
+      flex: 0 1 70px;
+    }
+    &--actions {
+      flex: 0 1 60px;
+    }
+  }
+  &__head-prop {
+    padding-right: 10px;
+    font: 700 16px/2.75 $fontCondensed;
+    text-transform: uppercase;
+    background: url($imgPath + 'group-12.svg') right center no-repeat;
+    cursor: pointer;
+  }
+  &__table-row {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+  }
+  &__row-data {
+    padding: 12px 5px;
+    font: 15px $fontApple;
+    &--activity {
+      padding-left: 18px;
+      flex: 0 1 55px;
+      background: url($imgPath + 'not-active.svg') 50% 30% no-repeat;
+    }
+    &--active {
+      background-image: url($imgPath + 'active.svg');
+    }
+    &--firm {
+      flex: 1 1 200px;
+    }
+    &--source {
+      background: url($imgPath + 'jobs-ulm.png') left center no-repeat;
+      flex: 0 1 100px;
+    }
+    &--categorization {
+      flex: 0 1 180px;
+    }
+    &--designation {
+      flex: 0 1 200px;
+    }
+    &--profile {
+      flex: 0 1 70px;
+    }
+    &--actions {
+      flex: 0 1 60px;
+    }
+  }
+  &__action {
+    color: $lime;
+  }
+  &__profile {
+    background: url($imgPath + 'ulm-print-link.svg') center center no-repeat;
+    width: 22px;
+    height: 31px;
+    &--ulm-print {
+      background-image: url($imgPath + 'ulm-print-link.svg');
+    }
+    &--ulm-online {
+      background-image: url($imgPath + 'ulm-online-link.svg');
+    }
+    &--augsburg-print {
+      background-image: url($imgPath + 'augsburg-print-link.svg');
+    }
+    &--augsburg-online {
+      background-image: url($imgPath + 'augsburg-online-link.svg');
+    }
+    &--munchen-print {
+      background-image: url($imgPath + 'munchen-print-link.svg');
+    }
+    &--munchen-online {
+      background-image: url($imgPath + 'munchen-online-link.svg');
+    }
+    &--stuttgart-print {
+      background-image: url($imgPath + 'stuttgart-print-link.svg');
+    }
+    &--stuttgart-online {
+      background-image: url($imgPath + 'stuttgart-online-link.svg');
+    }
+    &--darmstadt-print {
+      background-image: url($imgPath + 'darmstadt-print-link.svg');
+    }
+    &--darmstadt-online {
+      background-image: url($imgPath + 'darmstadt-online-link.svg');
+    }
+    &--bodensee-print {
+      background-image: url($imgPath + 'bodensee-print-link.svg');
+    }
+    &--bodensee-online {
+      background-image: url($imgPath + 'bodensee-online-link.svg');
+    }
+    &--karlsruhe-print {
+      background-image: url($imgPath + 'karlsruhe-print-link.svg');
+    }
+    &--karlsruhe-online {
+      background-image: url($imgPath + 'karlsruhe-online-link.svg');
+    }
+  }
+}

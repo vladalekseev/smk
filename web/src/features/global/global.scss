@@ -1,0 +1,25 @@
+@import '_vars.scss';
+body {
+  font: 16px $fontApple;
+  min-width: 1120px;
+  max-width: 1440px;
+  margin: auto;
+  position: relative;
+}
+.g-hidden {
+  display: none !important;
+}
+.g-validate {
+  color: #c00;
+  font-size: 16px;
+}
+select{
+  appearance: none;
+  &::-ms-expand {
+    display: none;
+  }
+}
+input[type="radio"] {
+  display: none;
+}
+

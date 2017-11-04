@@ -1,0 +1,22 @@
+@media screen and (max-width: 1439px) {
+  .aside-menu {
+    flex: 0 1 200px;
+    &__profile {
+      flex: 0 1 auto;
+      display: none;
+      position: absolute;
+      width: 140px;
+      height: 100%;
+    }
+    &__profile-step {
+      padding: 10px 0 0 0;
+      text-align: center;
+      line-height: 30px;
+      display: block;
+    }
+    &__profile-number {
+      display: block;
+      margin: auto;
+    }
+  }
+}

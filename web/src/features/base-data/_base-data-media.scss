@@ -1,0 +1,14 @@
+@media screen and (max-width: 1439px) {
+  .base-data {
+    &__back {
+      flex: 0 1 170px;
+    }
+    &__content {
+      flex: 0 1 935px;
+      padding-left: 10px;
+    }
+    &__name {
+      flex: 0 1 150px;
+    }
+  }
+}

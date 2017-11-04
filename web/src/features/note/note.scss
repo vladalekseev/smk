@@ -1,0 +1,49 @@
+@import '../global/vars';
+.note {
+  position: absolute;
+  top: 99px;
+  right: 0;
+  z-index: 10;
+  &__btn {
+    width: 28px;
+    height: 37px;
+    background: url($imgPath + 'hint.png') center center no-repeat;
+    &:hover {
+      opacity: .8;
+    }
+  }
+  &__form {
+    width: 402px;
+    height: 408px;
+    padding: 5px 7px 6px 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .5);
+    background-color: #eee;
+  }
+  &__form-header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  &__form-title {
+    padding-left: 21px;
+    font: 700 19px/34px $fontCondensed;
+    text-transform: uppercase;
+    background: url($imgPath + 'shape-note.svg') left 40% no-repeat;
+  }
+  &__form-btn {
+    width: 31px;
+    height: 31px;
+    background: url($imgPath + 'confirm-post-it.svg') center top no-repeat;
+    margin-bottom: 3px;
+  }
+  &__form-textarea {
+    width: 385px;
+    height: 358px;
+    border-radius: 1px;
+    border: 1px solid #dfdfdf;
+    resize: none;
+    padding: 14px 25px 0 10px;
+    background-color: #fff;
+  }
+}
+@import "note-media";

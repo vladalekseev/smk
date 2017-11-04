@@ -1,0 +1,40 @@
+@import '../global/vars';
+
+.overview {
+  display: flex;
+  flex-wrap: nowrap;
+  &__content {
+    padding: 65px 0 40px 25px;
+    flex: 0 1 1050px;
+  }
+  &__title {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  &__list {
+    margin-top: 20px;
+  }
+  &__list-header {
+    padding-left: 20px;
+    height: 44px;
+    font: 16px/44px $fontCondensed;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #fdfdfd, #f6f6f6);
+    border-bottom: 1px solid #ddd;
+  }
+  &__list-item {
+    padding-left: 20px;
+    padding-right: 10px;
+    height: 44px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    line-height: 44px;
+    color: $darkGrayColor;
+    font-size: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+  &__item-details {
+    color: $lime;
+  }
+}

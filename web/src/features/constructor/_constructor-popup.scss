@@ -1,0 +1,54 @@
+@import '../global/vars';
+
+.constructor-popup {
+  text-align: left;
+  padding: 15px 16px;
+  position: absolute;
+  z-index: 20;
+  top: 420px;
+  left: 50%;
+  height: 342px;
+  width: 402px;
+  background-color: #eee;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .5);
+  transform: translateX(-50%);
+  display: none;
+  &__title {
+    text-transform: uppercase;
+    color: #000;
+    font: bold 19px $fontCondensed;
+  }
+  &__description {
+    padding-top: 18px;
+    color: #b6b6b6;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  &__caption {
+    font-size: 16px;
+    margin-top: 32px;
+    line-height: 21px;
+    color: #000;
+  }
+  &__item {
+    padding-left: 15px;
+    background: url($imgPath + 'list-link.svg') left center no-repeat;
+    line-height: 19px;
+    font-size: 15px;
+    color: $lime;
+    &:hover {
+      opacity: .7;
+    }
+  }
+  &__exit {
+    position: absolute;
+    top: 12px;
+    right: 9px;
+    width: 15px;
+    height: 15px;
+    background: url($imgPath + 'clear-close.svg') center center no-repeat;
+    &:hover {
+      opacity: .7;
+    }
+  }
+}

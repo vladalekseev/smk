@@ -1,0 +1,104 @@
+@import '../global/vars';
+
+.login {
+  background: url($imgPath + 'bitmap.png') center bottom no-repeat;
+  padding-top: 173px;
+  padding-bottom: 399px;
+  &__popup {
+    color: #fff;
+    padding: 25px 29px 71px;
+    margin: auto;
+    height: 420px;
+    width: 694px;
+    background: url($imgPath + 'bg.png') center center no-repeat;
+  }
+  &__header {
+    opacity: 1;
+    padding-left: 53px;
+    background: url($imgPath + 'group-4.svg') left top no-repeat;
+    background-size: 41px 41px;
+  }
+  &__title {
+    text-transform: uppercase;
+    color: #fff;
+    font: bold 36px/1.2 $fontCondensed;
+  }
+  &__description {
+    height: 69px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 23px;
+    padding-top: 15px;
+  }
+  &__form {
+    opacity: 1;
+    width: 284px;
+    margin: 20px auto 0;
+  }
+  &__field {
+    width: 100%;
+    margin-top: 5px;
+    &--password {
+      margin-top: 18px;
+    }
+  }
+  &__hint {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 21px;
+    line-height: 1.3;
+  }
+  &__placeholder {
+    display: block;
+    flex: 1 1 auto;
+    font-size: 13px;
+  }
+  &__info {
+    display: block;
+    flex: 0 1 auto;
+    color: $lime;
+    font-size: 13px;
+    &:hover {
+      opacity: .9;
+    }
+  }
+  &__input {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: 42px;
+    border: 1px solid #dfdfdf;
+    border-radius: 1px;
+    background-color: #fff;
+    color: $grayColor;
+    text-indent: 5px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  &__btn {
+    margin-top: 24px;
+    border: none;
+    color: #fff;
+    position: relative;
+    height: 31px;
+    width: 144px;
+    text-align: center;
+    border-radius: 1px;
+    background:  url($imgPath + 'login.svg') 5% center no-repeat,
+    url($imgPath + 'rectangle-login.svg') center center no-repeat;
+    &:hover {
+      opacity: .9;
+    }
+  }
+  &__form-field {
+    position: relative;
+  }
+  &__error-text {
+    font-size: 13px;
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+  }
+}
+@import 'login-popup-media';

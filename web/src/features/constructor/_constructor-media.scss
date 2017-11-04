@@ -1,0 +1,11 @@
+@media screen and (max-width: 1439px) {
+  .constructor {
+    &__content {
+      flex: 0 1 auto;
+      padding: 50px 10px;
+    }
+    &__change-profile {
+      right: 50px;
+    }
+  }
+}

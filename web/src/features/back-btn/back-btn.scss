@@ -1,0 +1,22 @@
+@import '../global/vars';
+
+.back {
+  flex: 0 1 205px;
+  display: flex;
+  height: 62px;
+  background-color: #f3f7ff;
+  align-items: center;
+}
+.back-btn {
+  color: $lime;
+  font-size: 14px;
+  padding: 0 15px 0 30px;
+  margin: auto;
+  height: 31px;
+  border-radius: 1px;
+  border: 2px solid $lime;
+  background: url($imgPath + 'back.svg') 5% center no-repeat;
+  &:hover {
+    opacity: .7;
+  }
+}

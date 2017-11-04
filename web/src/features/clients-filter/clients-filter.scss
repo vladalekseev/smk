@@ -1,0 +1,293 @@
+@import '../global/vars';
+
+.clients {
+  width: 995px;
+  margin: auto;
+  padding-top: 65px;
+  padding-bottom: 50px;
+  &__header {
+    font: bold 28px/1 $fontSF;
+    margin-bottom: 9px;
+  }
+  &__filter {
+    padding: 10px 212px 35px 16px;
+    background-color: #eee;
+  }
+  &__filter-title {
+    padding: 12px 40px;
+    margin-bottom: 10px;
+    background: url($imgPath + 'filter.svg') left center no-repeat;
+    font: 700 19px $fontCondensed;
+    text-transform: uppercase;
+  }
+  &__filter-form {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    line-height: 2.6;
+  }
+  &__filter-select {
+    width: 243px;
+    height: 42px;
+    border-radius: 1px;
+    border: 1px solid #bbb;
+    background: #fff url($imgPath + 'select.svg') 95% center no-repeat;
+    text-indent: 15px;
+    color: $grayColor;
+    font: 16px/1 $fontApple;
+    &:hover {
+      border-color: #909090;
+    }
+  }
+  &__filter-input {
+    width: 243px;
+    height: 42px;
+    border-radius: 1px;
+    border: 1px solid #bbb;
+    background-color: #fff;
+    text-indent: 16px;
+  }
+  &__filter-submit {
+    outline: none;
+    margin: 6px 25px 6px 0;
+    color: #fff;
+    position: relative;
+    height: 31px;
+    width: 113px;
+    text-align: center;
+    border-radius: 1px;
+    background: url($imgPath + 'fill-10.svg') 9px center no-repeat,
+    url($imgPath + 'rect-full.png') right center no-repeat;
+    &:hover {
+      opacity: .8;
+    }
+  }
+  &__filter-results {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 42px;
+    align-items: center;
+    width: 120px;
+  }
+  &__results-amount {
+    flex: 1 1 auto;
+    white-space: nowrap;
+    color: #b6b6b6;
+    font: 16px/1 $fontApple;
+  }
+  &__results-reset {
+    flex: 0 1 18px;
+    height: 18px;
+    background: url($imgPath + 'clear-close.svg') center 65% no-repeat;
+  }
+  &__table {
+    color: $grayColor;
+    padding-bottom: 32px;
+    border-bottom: 4px solid #ccc;
+  }
+  &__table-head {
+    margin-top: 42px;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 44px;
+    background-image: linear-gradient(180deg, #fdfdfd 0%, #f6f6f6 100%);
+  }
+  &__head-date {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-left: 5px;
+    &--activity {
+      padding-left: 18px;
+      flex: 0 1 55px;
+    }
+    &--name {
+      flex: 1 1 308px;
+      border-right: 1px solid #ddd;
+    }
+    &--partners {
+      flex: 0 1 160px;
+      padding: 0 22px;
+    }
+    &--date {
+      flex: 0 1 100px;
+    }
+    &--profile {
+      flex: 0 1 70px;
+    }
+    &--status {
+      flex: 0 1 120px;
+    }
+    &--actions {
+      flex: 0 1 155px;
+    }
+  }
+  &__head-prop {
+    font: 700 16px/2.75 $fontCondensed;
+    text-transform: uppercase;
+    padding-right: 10px;
+    background: url($imgPath + 'group-12.svg') right center no-repeat;
+    cursor: pointer;
+    &:hover {
+      opacity: .8;
+    }
+  }
+  &__table-row {
+    display: flex;
+    flex-wrap: nowrap;
+    border-top: 1px solid #ccc;
+  }
+  &__row-data {
+    padding: 12px 5px;
+    font: 15px/2 $fontApple;
+    &--activity {
+      padding-left: 18px;
+      flex: 0 1 55px;
+      background: url($imgPath + 'not-active.svg') 60% 15% no-repeat;
+    }
+    &--active {
+      background-image: url($imgPath + 'active.svg');
+    }
+    &--name {
+      flex: 1 1 300px;
+      line-height: 1.18;
+      border-right: 1px solid #ddd;
+    }
+    &--partners {
+      flex: 0 1 160px;
+      padding-left: 22px;
+    }
+    &--date {
+      flex: 0 1 100px;
+    }
+    &--profile {
+      flex: 0 1 70px;
+    }
+    &--status {
+      flex: 0 1 120px;
+    }
+    &--actions {
+      flex: 0 1 155px;
+    }
+  }
+  &__row-show {
+    color: $lime;
+  }
+  &__profile {
+    background: url($imgPath + 'ulm-print-link.svg') center center no-repeat;
+    width: 22px;
+    height: 31px;
+    &--ulm-print {
+      background-image: url($imgPath + 'ulm-print-link.svg');
+    }
+    &--ulm-online {
+      background-image: url($imgPath + 'ulm-online-link.svg');
+    }
+    &--augsburg-print {
+      background-image: url($imgPath + 'augsburg-print-link.svg');
+    }
+    &--augsburg-online {
+      background-image: url($imgPath + 'augsburg-online-link.svg');
+    }
+    &--munchen-print {
+      background-image: url($imgPath + 'munchen-print-link.svg');
+    }
+    &--munchen-online {
+      background-image: url($imgPath + 'munchen-online-link.svg');
+    }
+    &--stuttgart-print {
+      background-image: url($imgPath + 'stuttgart-print-link.svg');
+    }
+    &--stuttgart-online {
+      background-image: url($imgPath + 'stuttgart-online-link.svg');
+    }
+    &--darmstadt-print {
+      background-image: url($imgPath + 'darmstadt-print-link.svg');
+    }
+    &--darmstadt-online {
+      background-image: url($imgPath + 'darmstadt-online-link.svg');
+    }
+    &--bodensee-print {
+      background-image: url($imgPath + 'bodensee-print-link.svg');
+    }
+    &--bodensee-online {
+      background-image: url($imgPath + 'bodensee-online-link.svg');
+    }
+    &--karlsruhe-print {
+      background-image: url($imgPath + 'karlsruhe-print-link.svg');
+    }
+    &--karlsruhe-online {
+      background-image: url($imgPath + 'karlsruhe-online-link.svg');
+    }
+  }
+  &__status {
+    padding-left: 32px;
+    background: url($imgPath + 'in-review.svg') left center no-repeat;
+    &--review {
+      background-image: url($imgPath + 'in-review.svg');
+    }
+    &--offline {
+      background-image: url($imgPath + 'offline.svg');
+    }
+    &--online {
+      background-image: url($imgPath + 'online.svg');
+    }
+  }
+  &__action {
+    cursor: pointer;
+    color: $lime;
+  }
+  &__paginator {
+    padding-top: 25px;
+    padding-right: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    color: $grayColor;
+  }
+  &__paginator-select {
+    flex: 0 1 56px;
+    height: 26px;
+    border-radius: 1px;
+    border: 1px solid #bbb;
+    background: #fff url($imgPath + 'select.svg') 95% center no-repeat;
+    padding-left: 15px;
+    font: 16px/1 $fontApple;
+    &:hover {
+      border-color: #909090;
+    }
+  }
+  &__paginator-results {
+    font: 13px/1 $fontApple;
+    flex: 0 1 135px;
+    margin-left: 8px;
+  }
+  &__paginator-pages {
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 0 1 auto;
+  }
+  &__paginator-page {
+    width: 20px;
+    height: 20px;
+    line-height: 1.5;
+    font-size: 13px;
+    color: $lime;
+    margin-right: 10px;
+    text-align: center;
+    border-radius: 50%;
+    transition: color .2s, background-color .2s;
+    &--active,
+    &:hover {
+      color: #fff;
+      background-color: $lime;
+    }
+  }
+  &__paginator-more {
+    color: $lime;
+    padding-left: 8px;
+    padding-right: 20px;
+    background: url($imgPath + 'link.svg') right 40% no-repeat;
+  }
+}

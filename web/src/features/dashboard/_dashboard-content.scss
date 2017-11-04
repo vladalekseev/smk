@@ -1,0 +1,139 @@
+@import '../global/vars';
+
+.dashboard-content {
+  width: 996px;
+  margin: auto;
+  padding-top: 57px;
+  padding-bottom: 91px;
+  &__header {
+    font: bold 28px/1 $fontSF;
+  }
+  &__description {
+    color: #a9aaa9;
+    font: 18px/1.25 $fontApple;
+    padding-top: 3px;
+  }
+  &__profile-header {
+    margin-top: 34px;
+    width: 168px;
+    font: 700 30px/1 $fontCondensed;
+    text-transform: uppercase;
+    border-bottom: 5px solid $lime;
+    padding-bottom: 7px;
+  }
+  &__profiles {
+    display: flex;
+    margin-top: 31px;
+    justify-content: space-between;
+  }
+  &__profiles-item {
+    padding-top: 66px;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+    width: 144px;
+    height: 105px;
+    background: center 14px  no-repeat, center center  no-repeat;
+    &:hover {
+      opacity: .75;
+    }
+    &--print-ulm {
+      background-image: url($imgPath + 'ulm-print.svg'), url($imgPath + 'bg-profile.png');
+    }
+    &--online-ulm {
+      background-image: url($imgPath + 'ulm-online.svg'), url($imgPath + 'bg-profile.png');
+    }
+    &--print-munchen {
+      background-image: url($imgPath + 'munchen-print.svg'), url($imgPath + 'bg-profile.png');
+    }
+    &--online-munchen {
+      background-image: url($imgPath + 'munchen-online.svg'), url($imgPath + 'bg-profile.png');
+    }
+    &--print-augsburg {
+      background-image: url($imgPath + 'augsburg-print.svg'), url($imgPath + 'bg-profile.png');
+    }
+    &--online-augsburg {
+      background-image: url($imgPath + 'augsburg-online.svg'), url($imgPath + 'bg-profile.png');
+    }
+  }
+  &__articles-title {
+    margin-top: 34px;
+    font: 700 30px/1 $fontCondensed;
+    text-transform: uppercase;
+    border-bottom: 5px solid $lime;
+    padding-bottom: 7px;
+    width: 123px;
+  }
+  &__articles {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 29px;
+  }
+  &__articles-item {
+    flex: 0 1 25%;
+    position: relative;
+    padding-bottom: 19px;
+    margin-right: 20px;
+    &:last-child {
+      flex: 1 1 25%;
+      margin-right: 0;
+    }
+  }
+  &__article-header {
+    font: 700 19px $fontCondensed;
+    text-transform: uppercase;
+  }
+  &__article-date {
+    color: #b5006c;
+  }
+  &__article-text {
+    font: 15px/1.4 $fontApple;
+    padding-top: 9px;
+  }
+  &__article-btn {
+    justify-content: flex-end;
+    color: $lime;
+    font: 15px/1.25 $fontApple;
+    position: absolute;
+    width: 40px;
+    bottom: 0;
+    right: 0;
+  }
+  &__sections {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 21px;
+  }
+  &__clients-section {
+    padding: 20px 25px;
+    flex: 1 1 45%;
+    width: 486px;
+    height: 234px;
+    margin-right: 26px;
+    background: url($imgPath + 'shape_clients.png') left center no-repeat, url($imgPath + 'mask.png') center center no-repeat;
+    &:hover {
+      opacity: .75;
+    }
+  }
+  &__campaigns-section {
+    padding: 20px 25px;
+    flex: 1 1 45%;
+    width: 486px;
+    height: 234px;
+    margin-right: 0;
+    background: url($imgPath + 'shaoe_comp.svg') right center no-repeat, url($imgPath + 'mask.png') center center no-repeat;
+    &:hover {
+      opacity: .75;
+    }
+  }
+  &__section-name {
+    padding: 5px 0 5px 55px;
+    color: #fff;
+    font: 700 30px $fontCondensed;
+    text-transform: uppercase;
+    background: url($imgPath + 'kunden-icon-small.svg') left center no-repeat;
+    &--campaigns {
+      background-image: url($imgPath + 'kampagnen-icon.svg');
+    }
+  }
+}

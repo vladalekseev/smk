@@ -1,0 +1,237 @@
+@import '../global/vars';
+
+.campaigns-filter {
+  display: flex;
+  flex-wrap: nowrap;
+  &__content {
+    padding: 65px 0 40px 25px;
+    flex: 0 1 1050px;
+  }
+  &__header {
+    display: inline-block;
+    font: bold 28px/1 $fontSF;
+  }
+  &__add-company {
+    display: inline-block;
+    margin-left: 25px;
+    margin-bottom: 15px;
+    padding-right: 8px;
+    width: 266px;
+    height: 31px;
+    line-height: 38px;
+    text-align: center;
+    color: #fff;
+    background: url($imgPath + 'plus.svg') 5% center no-repeat,
+    url($imgPath + 'rect-full.png') right center no-repeat;
+    background-size: auto, 100%;
+    &:hover {
+      opacity: .7;
+    }
+  }
+  &__filter {
+    padding: 10px 212px 35px 16px;
+    background-color: #eee;
+  }
+  &__filter-title {
+    padding: 12px 40px;
+    margin-bottom: 10px;
+    background: url($imgPath + 'filter.svg') left center no-repeat;
+    font: 700 19px $fontCondensed;
+    text-transform: uppercase;
+  }
+  &__title-info {
+    margin-left: 5px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url($imgPath + 'explain.svg') center center no-repeat;
+    cursor: pointer;
+  }
+  &__filter-form {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    line-height: 2.6;
+  }
+  &__filter-select {
+    padding-left: 15px;
+    width: 243px;
+    height: 42px;
+    border-radius: 1px;
+    border: 1px solid #bbb;
+    background: #fff url($imgPath + 'select.svg') 95% center no-repeat;
+    color: $grayColor;
+    font: 16px/1 $fontApple;
+    &:hover {
+      border-color: #909090;
+    }
+  }
+  &__filter-submit {
+    outline: none;
+    margin: 6px 15px 6px 0;
+    color: #fff;
+    position: relative;
+    height: 31px;
+    width: 113px;
+    text-align: center;
+    border-radius: 1px;
+    background: url($imgPath + 'fill-10.svg') 9px center no-repeat,
+    url($imgPath + 'rect-full.png') right center no-repeat;
+    &:hover {
+      opacity: .8;
+    }
+  }
+  &__filter-results {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 42px;
+    align-items: center;
+    width: 120px;
+  }
+  &__results-amount {
+    flex: 1 1 auto;
+    white-space: nowrap;
+    color: #b6b6b6;
+    font: 16px/1 $fontApple;
+  }
+  &__results-reset {
+    flex: 0 1 18px;
+    height: 18px;
+    background: url($imgPath + 'clear-close.svg') center 65% no-repeat;
+  }
+  &__table {
+    color: $grayColor;
+  }
+  &__table-head {
+    margin-top: 42px;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 44px;
+    border-bottom: 1px solid #ccc;
+    background-image: linear-gradient(180deg, #fdfdfd 0%, #f6f6f6 100%);
+  }
+  &__head-date {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-left: 5px;
+    &--activity {
+      padding-left: 18px;
+      flex: 0 1 55px;
+    }
+    &--name {
+      flex: 1 1 200px;
+    }
+    &--location {
+      flex: 0 1 100px;
+    }
+    &--start {
+      flex: 0 1 100px;
+    }
+    &--lock {
+      flex: 0 1 100px;
+    }
+    &--status {
+      flex: 0 1 110px;
+    }
+    &--end {
+      flex: 0 1 110px;
+    }
+    &--actions {
+      flex: 0 1 260px;
+    }
+  }
+  &__head-prop {
+    font: 700 16px/2.75 $fontCondensed;
+    text-transform: uppercase;
+  }
+  &__table-row {
+    display: flex;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid #ccc;
+  }
+  &__row-data {
+    padding: 12px 5px;
+    font: 15px/2 $fontApple;
+    &--activity {
+      padding-left: 18px;
+      flex: 0 1 55px;
+      background: url($imgPath + 'not-active.svg') 60% 15% no-repeat;
+    }
+    &--active {
+      background-image: url($imgPath + 'active.svg');
+    }
+    &--name {
+      flex: 1 1 200px;
+    }
+    &--lock,
+    &--start,
+    &--location {
+      flex: 0 1 100px;
+    }
+    &--status,
+    &--end {
+      flex: 0 1 110px;
+    }
+    &--actions {
+      flex: 0 1 260px;
+      line-height: 1.5;
+    }
+  }
+  &__action {
+    color: $lime;
+  }
+  &__paginator {
+    padding-top: 25px;
+    padding-right: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    color: $grayColor;
+  }
+  &__paginator-select {
+    flex: 0 1 56px;
+    height: 26px;
+    border-radius: 1px;
+    border: 1px solid #bbb;
+    background: #fff url($imgPath + 'select.svg') 95% center no-repeat;
+    padding-left: 15px;
+    font: 16px/1 $fontApple;
+    &:hover {
+      border-color: #909090;
+    }
+  }
+  &__paginator-results {
+    font: 13px/1 $fontApple;
+    flex: 0 1 135px;
+    margin-left: 8px;
+  }
+  &__paginator-pages {
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 0 1 auto;
+  }
+  &__paginator-page {
+    width: 20px;
+    height: 20px;
+    line-height: 1.5;
+    font-size: 13px;
+    color: $lime;
+    margin-right: 10px;
+    text-align: center;
+    border-radius: 50%;
+    transition: color .2s, background-color .2s;
+    &--active,
+    &:hover {
+      color: #fff;
+      background-color: $lime;
+    }
+  }
+  &__paginator-more {
+    color: $lime;
+    padding-left: 8px;
+    padding-right: 20px;
+    background: url($imgPath + 'link.svg') right 40% no-repeat;
+  }
+}
